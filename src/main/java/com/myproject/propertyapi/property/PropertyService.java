@@ -1,4 +1,4 @@
-package com.myproject.property;
+package com.myproject.propertyapi.property;
 
 import java.util.Optional;
 
@@ -27,6 +27,7 @@ public class PropertyService {
 
         if (foundProperty.isPresent()) {
             Property updatedProperty = foundProperty.get();
+
             updatedProperty.setImage(property.getImage());
             updatedProperty.setAddress(property.getAddress());
             updatedProperty.setStatus(property.getStatus());

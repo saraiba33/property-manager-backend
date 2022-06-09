@@ -1,9 +1,7 @@
-package com.myproject.property;
+package com.myproject.propertyapi.property;
 
 import java.util.Map;
 import java.util.HashMap;
-
-import com.myproject.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -16,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.myproject.propertyapi.exception.ResourceNotFoundException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -29,8 +30,8 @@ public class PropertyController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public Map<String, Iterable<Property>> list() {
-        Iterable<Property> property = propertyService.list();
-        return createHashPlural(property);
+        Iterable<Property> properties = propertyService.list();
+        return createHashPlural(properties);
     }
 
     @GetMapping("/{id}")

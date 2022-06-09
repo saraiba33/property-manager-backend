@@ -1,4 +1,4 @@
-package com.myproject.property;
+package com.myproject.propertyapi.property;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "some_table")
+@Table(name = "propertydata")
 public class Property {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,6 +1,4 @@
-package com.myproject.property;
-
-import com.myproject.property.*;
+package com.myproject.propertyapi.property;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
