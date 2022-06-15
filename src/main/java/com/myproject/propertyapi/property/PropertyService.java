@@ -32,6 +32,15 @@ public class PropertyService {
             updatedProperty.setAddress(property.getAddress());
             updatedProperty.setStatus(property.getStatus());
             updatedProperty.setEndDate(property.getEndDate());
+            updatedProperty.setRentAmount(property.getRentAmount());
+            updatedProperty.setTenant1(property.getTenant1());
+            updatedProperty.setTenant1Contact(property.getTenant1Contact());
+            updatedProperty.setTenant2Contact(property.getTenant2Contact());
+            updatedProperty.setTenant2(property.getTenant2());
+            updatedProperty.setEmergencyContact1(property.getEmergencyContact1());
+            updatedProperty.setEmergencyNumber1(property.getEmergencyContact1());
+            updatedProperty.setEmergencyContact2(property.getEmergencyContact1());
+            updatedProperty.setEmergencyNumber2(property.getEmergencyNumber2());
 
             propertyRepository.save(updatedProperty);
             return Optional.of(updatedProperty);
